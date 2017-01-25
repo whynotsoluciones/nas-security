@@ -39,5 +39,11 @@ describe('Security module unit tests', function () {
     });
   });
 
+  describe('allow', function () {
+    it('Should do md5 hash of string', function (done) {
+      expect(security.md5('1longpasS_woRd')).to.be.equal('9aa233262fb48be9b07230f3c8ff6b94');
+      done();
+    });
+  });
 
 });

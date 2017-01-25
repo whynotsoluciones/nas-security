@@ -79,6 +79,10 @@ module.exports.hmacsha1 = function (str, key) {
   return crypto.createHmac('sha1', keyBuffer).update(buffer).digest('hex');
 };
 
+module.exports.md5 = function (str) {
+  return crypto.createHash('md5').update(str).digest("hex");
+};
+
 module.exports.generateRandomKeySignature = function (length, cb) {
   crypto.randomBytes(length, function (ex, buf) {
     cb && cb(ex, buf.toString('base64').replace(/:/g, '-'));

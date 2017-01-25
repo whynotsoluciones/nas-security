@@ -1,6 +1,6 @@
 {
   "name": "nas-security",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Security module for the NAS Framework",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,7 @@
     "nas"
   ],
   "author": "Why Not Soluciones, S.L. <info+npm@whynotsoluciones.com>",
-  "contributors": [
-    {
+  "contributors": [{
       "name": "Ezequiel Cuñado",
       "email": "ecunado@gmail.com"
     },
