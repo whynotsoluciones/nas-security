@@ -66,7 +66,7 @@ module.exports.checkSignature = function (req, signature, secret) {
  */
 module.exports.sign = function (req, secret) {
   var hostname = req.hostname || "";
-  var originalUrl = req.originalUrl || "";
+  var originalUrl = decodeURIComponent(req.originalUrl) || "";
   var body = util.isEmptyObject(req.body) ? "" : JSON.stringify(req.body);
   var payload = hostname + originalUrl + body;
 
